@@ -1,3 +1,6 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from langchain.chains import RetrievalQA
 from langchain.embeddings.google_palm import GooglePalmEmbeddings
 from langchain.llms import GooglePalm
